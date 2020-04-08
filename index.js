@@ -17,7 +17,8 @@ server.get("/users", (req, res) => {
 	// it's essentially "faking" a real database
 	const users = db.getUsers()
 
-	res.json(users)
+	
+	res.status(200).json(users);
 })
 
 server.get("/users/:id", (req, res) => {
@@ -86,3 +87,7 @@ server.delete("/users/:id", (req, res) => {
 server.listen(8080, () => {
 	console.log("server started at port 8080")
 })
+
+// HTTP Method
+// URI : scheme://host_name:port/path?parameter_list
+// https://www.google.com/some/document?with_params=value
