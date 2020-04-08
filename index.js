@@ -16,8 +16,6 @@ server.get("/users", (req, res) => {
 	// don't worry about the function implementation yet, just call it.
 	// it's essentially "faking" a real database
 	const users = db.getUsers()
-
-	
 	res.status(200).json(users);
 })
 
